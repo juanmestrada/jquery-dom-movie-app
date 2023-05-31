@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍿</text></svg>">
+</head>
+
+<body>
+    <div class="container">
+        <div id="nav">
+            <div class="logo">
+                <img src="popcorn.png">
+            </div>
+            
+            <div class="form-container">
+                <form class="form-inline justify-content-center" id="movie-form">
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input type="text" id="title" class="form-control" placeholder="Title..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="rating">Rating</label>
+                      <input type="number" min="0" max="10" id="rating" class="form-control"  placeholder="Rating..." required>
+                    </div>
+                      
+                    <div class="form-group">
+                      <button type="submit" class="">Submit</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+
+        <h1>Movie library</h1>
+
+        <div id="library">
+            <div class="sort">
+                <select class="form-select">
+                    <option selected>Sort</option>
+                    <option value="title" class="desc">Alphabetically &darr;</option>
+                    <option value="title" class="asc">Alphabetically &uarr;</option>
+                    <option value="rating" class="desc">Rating &darr;</option>
+                    <option value="rating" class="asc">Rating &uarr;</option>
+                </select>
+            </div>
+
+            <div id="library-container" class="d-flex flex-wrap">
+
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
